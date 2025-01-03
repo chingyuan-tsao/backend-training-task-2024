@@ -2,13 +2,19 @@
 // 情境：Alex 正在健身房鍛鍊，他正在使用跑步機慢跑，請用變數描述以下狀態：
 
 // 1. 請宣告一個 `const` 變數名稱為 `alexAge`，並賦予值為 `25`。
-test
-// 2. 請宣告一個 `const` 變數名稱為 `alexMembershipID`，並賦予值為字串 `"GYM2024-12345"`。
-// 3. 請宣告一個 `const` 變數名稱為 `isRunningOnTreadmill`，並賦予值為 `true`。
-// 4. 使用 `console.log()` 輸出 `alexAge`、`alexMembershipID` 和 `isRunningOnTreadmill`。
-
-// 1.1 範例
 const alexAge = 25;
+
+// 2. 請宣告一個 `const` 變數名稱為 `alexMembershipID`，並賦予值為字串 `"GYM2024-12345"`。
+const alexMembershipID = "GYM2024-12345";
+
+// 3. 請宣告一個 `const` 變數名稱為 `isRunningOnTreadmill`，並賦予值為 `true`。
+const isRunningOnTreadmill = true;
+
+// 4. 使用 `console.log()` 輸出 `alexAge`、`alexMembershipID` 和 `isRunningOnTreadmill`。
+console.log(alexAge);
+console.log(alexMembershipID);
+console.log(isRunningOnTreadmill);
+
 
 // ### 題目二：變數命名練習
 // - 瑜伽團課 - 300 元
