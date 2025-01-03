@@ -33,18 +33,29 @@ const 運動預算 = 3000;
 // 條件一：一定至少要買 1 堂重訓團課和瑜伽團課
 // 條件二：瑜伽團課只能一次買 3 堂
 // 條件三：一定要花到 2400 以上，並購買 5 堂課程
-let AlexBudget = 運動預算 - 重訓團課*4 - 瑜伽團課*3 ; 
+let AlexBudget = 3000; // 預算3000
+AlexBudget -= 重訓團課*4; // 預算扣掉4堂重訓團課
+AlexBudget -= 瑜伽團課*3; // 預算扣掉3堂瑜珈團課
 console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 // ### 題目四：線稿圖截圖，看圖宣告變數
 // 請參考資料夾內 q4.webp 圖片
 // 請依照你看到的內容來嘗試設計變數和值（至少 3 個）
+let course = 14;
+let courseTime = 50;
+let coursePrice = 180;
+let total = 2520;
 
 // ### 題目五：布林值與變數定義，看是否有用對 const, let
 // 情境：Alex 在往健身房的路上，望向城市的風景，請描述她看到的一切，並宣告變數與賦予值
 // 4-1. Alex 在等紅綠燈，他抬頭看一下現在是紅燈，還有 28 秒綠燈（最多 3 個宣告）
+let redLight = true;
+let second = 28;
 // 4-2. 目前一起等待的機車有 8 台
+let motorcycle = 8;
 // 4.3. Alex 望向天空，看到天上有 5 朵白雲和 1 顆太陽
+let cloud = 5;
+const sun = 1;
 
 // ### 題目六：情境題：簡單變數計算
 // 情境：Alex 每天都會帶著 2000cc 的水壺
@@ -57,7 +68,9 @@ console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 let myWater = 2000; // 水壺容量
 myWater -= 500; // 早上喝了 500cc
-
+myWater -= 800; // 中午喝了 800cc
+myWater += 1000; // 下午裝了 1000cc
+myWater -= 700; // 健身完喝了 700cc
 console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
 // ### 題目七：情境題：變數計算
@@ -69,7 +82,10 @@ console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
 let totalBill = 0;
 const machineUsePrice = 50;
-
+const groupClasses = 150;
+let machineUsePriceTotal = machineUsePrice*3;
+let groupClassesTotal = groupClasses*2;
+let total = machineUsePriceTotal+groupClassesTotal;
 console.log(
   `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${total}元`
 );
@@ -78,11 +94,11 @@ console.log(
 // 情境：請依照以下程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 let a = 8; // 範例：宣告了一個 a 的變數，並賦予了一個 8 的數字型別
-let b = 0;
-a = 13;
-a = b + 4;
-a - b;
-b += 1;
+let b = 0; // 宣告一個 b 的變數，並賦予了一個 0 的數字型別
+a = 13; // 修改變數 a 的值為 13
+a = b + 4; // 修改變數 a 的值為變數 b 的值加 4
+a - b; // 僅運算 a-b 的值
+b += 1;// 修改變數 b 的值為變數 b 的值加 1
 
 // ### 題目九：型別查詢
 // 請不要觀看 console.log，透過註解告知解答每個變數的型別
@@ -96,13 +112,21 @@ let h = f + g;
 // 請從以下新增註解，告知上面每行各別是哪些型別
 // a 是 string
 // b 是 ???
+c 是 string
+d 是 number
+e 是 string
+f 是 boolean
+g 是 number
+h 是 NaN
 
 // ### 題目十：傳值與傳參考
 // 情境：請依照程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 
-let numberArr1 = [5, 10, 15];
-let numberArr2 = numberArr1;
-numberArr2.push(20);
-numberArr2 = [25, 30, 35];
+let numberArr1 = [5, 10, 15]; // 宣告 numberArr1 為陣列，值為 [5, 10, 15]
+let numberArr2 = numberArr1; // 宣告 numberArr2 與 numberArr1 共用同一個陣列 [5, 10, 15]
+numberArr2.push(20); // 在陣列 [5, 10, 15] 後面增加一個值 20
+numberArr2 = [25, 30, 35]; // 重新賦予 numberArr2 新的值 [25, 30, 35]
 console.log(numberArr1, numberArr2);
+
+答案：[5, 10, 15, 20] [25, 30, 35]
