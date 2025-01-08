@@ -16,7 +16,7 @@ console.log(f >= e);
 console.log(f != e);
 console.log(f == e);
 
-test
+test111
 
 // ### 題目二：比較運算子 + 強制轉型
 // 請回答每個 console.log 的值為？
