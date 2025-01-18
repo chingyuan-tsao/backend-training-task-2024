@@ -31,6 +31,41 @@
 // addPurchaseRecord("Hannah", 50); >> 印出 console.log 文字為 新增購買記錄成功！會員 Hannah 購買 50 堂課，總金額為 55000 元。
 // addPurchaseRecord("名稱", “課程數量”); >> 印出 console.log 文字為 輸入錯誤，請輸入有效的會員名稱和課程數量。
 
+//codepen:https://codepen.io/ggnhmrxv-the-scripter/pen/wBwxrWY?editors=0012
+let purchaseRecords =[];
+
+function addPurchaseRecord(name,courses){ //函式裡面的參數會自動宣告
+  //先確認輸入的值是否有效
+  if(typeof name !== "string" || name.trim() === "" || typeof courses !== "number" || courses <= 0){
+     console.log(`輸入錯誤，請輸入有效的會員名稱和課程數量。`);
+     return; //強制結束，不執行下面的程式
+  }
+  
+  let obj = {};
+  obj.name = name;
+  obj.courses = courses;
+      
+  let price; //需要先宣告
+  if(courses <= 10){price = 1500}
+    else if(courses >= 11 && courses <= 20){price = 1300}
+    else{price = 1100}
+  obj.price = price;
+  
+  let total = courses*price; //需要先宣告
+  obj.total = total;
+  
+  purchaseRecords.push(obj);
+  
+  console.log(`新增購買記錄成功！會員${name}購買${courses}堂課，總金額為${obj.total}元。`)
+}
+
+addPurchaseRecord("Alice", 4);
+addPurchaseRecord("Bob", 12);
+addPurchaseRecord("Charlie", 25);
+addPurchaseRecord("Hannah", 50);
+addPurchaseRecord("名稱", "課程數量");
+
+
 
 // 第二階段：計算目前的總營業額
 // 新增函式 calculateTotalPrice，計算目前的總營業額為多少。
