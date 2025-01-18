@@ -103,4 +103,4 @@ const noPurchaseMember = members.filter(function(member){
     return purchaseMember.includes(member) === false; 
 })
 
-console.log(noPurchaseMember)
+console.log(`未購買課程的會員有：${noPurchaseMember}`)
