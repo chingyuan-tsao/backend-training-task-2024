@@ -72,6 +72,16 @@ addPurchaseRecord("名稱", "課程數量");
 
 // 印出 console.log 文字為 目前總營業額為 ${totalPrice} 元
 
+//codepen:https://codepen.io/ggnhmrxv-the-scripter/pen/azojLWB?editors=0012
+let totalPrice = 0;
+purchaseRecords.forEach(function(item){
+  // console.log(item)
+  totalPrice += item.total;
+})
+
+console.log(`目前總營業額為 ${totalPrice} 元`)
+
+
 // 第三階段：篩選出還沒有購課的會員
 // 新增函式 filterNoPurchaseMember，篩選特定條件的會員記錄。例如：未購買過課程的會員，並依序列出
 
