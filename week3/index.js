@@ -97,9 +97,9 @@ calculateTotalPrice()
 const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"]; 
 //購課會員
 const purchaseMember = ["Alice", "Bob", "Charlie", "Hannah"]; 
-//未購課會員(篩選members中沒有夠課的會員)
+//未購課會員(篩選members中沒有購課的會員)
 const noPurchaseMember = members.filter(function(member){ 
-    //檢查 member 是否存在於 purchaseMember 陣列中，存在回傳 true、不存在回傳 false
+    //檢查 members 的每一個 member 是否存在於 purchaseMember 陣列中，存在回傳 true、不存在回傳 false
     return purchaseMember.includes(member) === false; 
 })
 
