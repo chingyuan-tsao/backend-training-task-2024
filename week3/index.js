@@ -32,6 +32,7 @@
 // addPurchaseRecord("名稱", “課程數量”); >> 印出 console.log 文字為 輸入錯誤，請輸入有效的會員名稱和課程數量。
 
 //codepen:https://codepen.io/ggnhmrxv-the-scripter/pen/wBwxrWY?editors=0012
+
 let purchaseRecords =[];
 
 function addPurchaseRecord(name,courses){ //函式裡面的參數會自動宣告
@@ -69,20 +70,37 @@ addPurchaseRecord("名稱", "課程數量");
 
 // 第二階段：計算目前的總營業額
 // 新增函式 calculateTotalPrice，計算目前的總營業額為多少。
-
 // 印出 console.log 文字為 目前總營業額為 ${totalPrice} 元
 
 //codepen:https://codepen.io/ggnhmrxv-the-scripter/pen/azojLWB?editors=0012
-let totalPrice = 0;
-purchaseRecords.forEach(function(item){
-  // console.log(item)
-  totalPrice += item.total;
-})
 
-console.log(`目前總營業額為 ${totalPrice} 元`)
+function calculateTotalPrice(){
+    let totalPrice = 0;
+    purchaseRecords.forEach(function(item){
+        // console.log(item)
+        totalPrice += item.total;
+    })
+    console.log(`目前總營業額為 ${totalPrice} 元`)
+}
+
+calculateTotalPrice()
+
 
 
 // 第三階段：篩選出還沒有購課的會員
 // 新增函式 filterNoPurchaseMember，篩選特定條件的會員記錄。例如：未購買過課程的會員，並依序列出
-
 // 印出 console.log 文字為 未購買課程的會員有：.......
+
+//codepen:https://codepen.io/ggnhmrxv-the-scripter/pen/qEWyPLp?editors=0012
+
+//目前的會員
+const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"]; 
+//購課會員
+const purchaseMember = ["Alice", "Bob", "Charlie", "Hannah"]; 
+//未購課會員(篩選members中沒有夠課的會員)
+const noPurchaseMember = members.filter(function(member){ 
+    //檢查 member 是否存在於 purchaseMember 陣列中，存在回傳 true、不存在回傳 false
+    return purchaseMember.includes(member) === false; 
+})
+
+console.log(noPurchaseMember)
